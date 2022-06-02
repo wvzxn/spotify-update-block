@@ -10,5 +10,6 @@ ___
 3) Update Folder --> Properties --> Security --> Advanced
 4) Remove users with `Deny` permission type
 5) Press `Apply` and `OK`
+6) Delete `.update_block` file in `~\AppData\Local\Spotify\`
 ___
 ![This is an image](/img.jpg)
