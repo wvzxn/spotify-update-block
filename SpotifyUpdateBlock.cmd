@@ -1,7 +1,3 @@
-@echo off
-if not "%1"=="am_admin" ( powershell start -verb runas '%0' 'am_admin "%~1" "%~2"' & exit )
-if not exist "%localappdata%\Spotify\Update" ( md "%localappdata%\Spotify\Update" )
-:: network-science.de/ascii/ mini
 ::: =========================================================
 :::|                 _                                       |
 :::|  _ ._  _ _|_ o_|_        ._  _| _._|_  _   |_ | _  _ |  |
@@ -9,6 +5,11 @@ if not exist "%localappdata%\Spotify\Update" ( md "%localappdata%\Spotify\Update
 :::|    |              /      |                              |
 ::: =========================================================
 ::: 
+:: Author: wvzxn // https://github.com/wvzxn
+:: Used ASCII Generator: mini // http://network-science.de/ascii
+@echo off
+if not "%1"=="am_admin" ( powershell start -verb runas '%0' 'am_admin "%~1" "%~2"' & exit )
+if not exist "%localappdata%\Spotify\Update" ( md "%localappdata%\Spotify\Update" )
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 if exist "%localappdata%\Spotify\.spotify-update-block" ( goto:blockinstalled )
 echo Press ^[Y^] to install
