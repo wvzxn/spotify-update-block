@@ -12,7 +12,7 @@ It acts as both installer and uninstaller.
 - Open Powershell `Win` + `R`
 - Paste the command:
 ```
-[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12;$l="https://github.com/wvzxn/spotify-update-block/releases/latest/download/spotify-update-block.cmd";$d="$env:tmp\sub.cmd";iwr "$l" -outFile "$d";start "$d" -verb runAs -wait;ri "$d" -force;exit
+[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12;$l="https://github.com/wvzxn/spotify-update-block/releases/latest/download/spotify-update-block.cmd";$d="$env:tmp\sub.cmd";iwr "$l" -outFile "$d";start "$d" -verb runAs -wait;ri "$d" -force
 ```
 
 ## Manual uninstallation
